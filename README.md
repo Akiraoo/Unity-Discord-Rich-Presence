@@ -1,5 +1,7 @@
 # Discord Rich Presence for Unity
 
+[English Version](README_en-US.md)
+
 一個輕量的 Unity Editor Discord Rich Presence 插件。
 
 本插件會自動將目前 Unity 專案與 Editor 狀態顯示為 Discord 狀態，也就是 Discord 個人資料上「正在遊玩」的那一欄。
