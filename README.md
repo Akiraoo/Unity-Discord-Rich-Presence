@@ -1,199 +1,195 @@
 # Discord Rich Presence for Unity
 
-[繁體中文版](README_zh-TW.md)
+一個輕量的 Unity Editor Discord Rich Presence 插件。
 
-A lightweight Discord Rich Presence plugin for the Unity Editor.
+本插件會自動將目前 Unity 專案與 Editor 狀態顯示為 Discord 狀態，也就是 Discord 個人資料上「正在遊玩」的那一欄。
 
-Discord Prescene automatically displays information about your current Unity project and Unity Editor as a Discord Rich Presence.
+## 功能
 
-## Features
+- 自動顯示目前 Unity 專案
+- 顯示目前開啟的場景
+- 顯示 Unity 版本
+- 顯示目前 Editor 狀態
+- 顯示打開時間
+- 支援自訂 Rich Presence 圖標
+- 在使用 Unity 時自動更新 Rich Presence
 
-- Automatically displays the current Unity project
-- Displays the active Scene
-- Displays the Unity version
-- Displays the current Editor state
-- Displays elapsed time
-- Supports custom Rich Presence icons
-- Automatically updates Rich Presence while working in Unity
+## 系統需求
 
-## Requirements
-
-- Unity 2022.3 or later
+- Unity 2022.3 或更高版本
 - Discord Social SDK for Unity
-- Discord desktop application
+- Discord APP
 
-**Tested with Unity `2022.3.22f1`.**
+**測試用的版本：Unity `2022.3.22f1`**
 
-Other Unity versions may work, but have not been tested.
+其他 Unity 版本理論上應該能用，反正我沒試過。
 
 ---
 
-## Installation
+## 安裝
 
-### 1. Download Discord Prescene
+### 1. 下載插件
 
-Download the latest `.unitypackage` from the [Releases](../../releases) page.
+前往 [Releases](../../releases) 頁面下載最新版本的 `.unitypackage`。
 
-In Unity, select:
+在 Unity 中選擇：
 
 **Assets → Import Package → Custom Package...**
 
-Select the downloaded `.unitypackage` and import all files.
+選擇下載的 `.unitypackage`，並匯入所有檔案。
 
-### 2. Install Discord Social SDK
+### 2. 安裝 Discord Social SDK
 
-Discord Prescene requires the **Discord Social SDK for Unity**.
+Discord Presence 需要 **Discord Social SDK for Unity**。
 
-The SDK is **not included** with Discord Prescene and must be downloaded separately.
+SDK **不包含在本插件中**，需要另外從 Discord 官方下載。
 
-Follow the official Discord Unity guide:
+請參考 Discord 官方 Unity 教學：
 
 [Discord Social SDK — Getting Started with Unity](https://docs.discord.com/developers/discord-social-sdk/getting-started/using-unity)
 
-Download the **Unity Plugin** and import it into your Unity project.
+下載 **Unity Plugin** 並匯入你的 Unity 專案。
 
-> **Important:** Download the **Unity Plugin**, not the Unity Sample.
+> **注意：** 要下載的是 **Unity Plugin**，不是 Unity Sample。
 
-### ⚠️ You do NOT need to complete the entire Discord guide
+### ⚠️ 不用完成 Discord 官方教學的全部步驟
 
-The official Discord documentation contains additional steps for OAuth, authentication, login, and other Social SDK features.
+Discord 官方文件後續還包含 OAuth、驗證、登入以及其他 Social SDK 功能。
 
-**Do not follow those steps for Discord Prescene.**
+**多做多心酸的，這個腳本根本用不到，所以不要照著官方文檔的後續步驟操作。**
 
-You only need to:
+你只需要：
 
-**Create a Discord Application → Get the Application ID → Stop.**
+**建立 Discord Application → 取得 Application ID** 就這樣
 
-Discord Prescene handles the required SDK initialization itself.
+本插件會自行處理所需的 SDK 初始化。
 
-You do **not** need to implement:
+**這些全都不要碰！！**：
 
 - OAuth
-- Discord login
-- User authentication
-- Authorization flow
-- Other Social SDK features
+- Discord 登入
+- 使用者驗證
+- 授權流程
+- 其他 Social SDK 功能
 
-### 3. Restart Unity
+### 3. 重新啟動 Unity
 
-After importing the Discord Social SDK and Discord Prescene, **restart the Unity Editor**.
+匯入 Discord Social SDK 和插件後，**重新啟動 Unity Editor**。
 
-A restart is required for the plugin and SDK to initialize correctly.
 
 ---
 
-## Setup
+## 設定
 
-### 1. Create a Settings Asset
+### 1. 建立設定檔
 
-In the Unity Editor, open:
+在 Unity Editor 中開啟：
 
-**Tools → Discord Prescene → Create Settings**
+**Tools → Discord Presence → Create Settings**
 
-This will create a Discord Prescene settings asset in your project.
+這會在你的專案中建立設定檔。
 
-Select the generated settings asset in the Project window.
+在 Project 視窗中選擇建立好的設定檔（會自己選擇，但可能有bug）。
 
-### 2. Enter your Discord Application ID
+### 2. 填入 Discord Application ID
 
-Create a Discord Application through the official Discord Developer Portal.
+首先建立一個 Discord Application。
 
-For the official setup instructions, see:
+建立 Application 的官方教學：
 
 [Discord Social SDK — Getting Started with Unity](https://docs.discord.com/developers/discord-social-sdk/getting-started/using-unity)
 
-After creating your application, copy its **Application ID**.
+建立完成後，複製你的 **Application ID**。
 
-The Application ID is a long numeric value, for example:
+Application ID 是短的那串，長這樣：
 
 ```text
 123456789012345678
 ```
+不要看錯把公開金鑰給填上去了，那對這個腳本來說沒用
 
-Paste it into the **Application ID** field in the Discord Prescene Settings Inspector.
+將 Application ID 貼到 Discord Presence Settings Inspector 中的 **Application ID** 。
 
-### 3. Configure the Icon ID
+### 3. 設定 Icon ID
 
-Discord Prescene allows you to change the Rich Presence icon.
+Discord Presence 支援自訂的 Rich Presence 圖示。
 
-Open your Discord Application in the Discord Developer Portal and upload an image to the Rich Presence assets section.
+在 Discord Developer Portal 打開 Discord Application後臺，在Rich Presence素材那上傳圖片。
 
-Copy the asset's **ID/key** and enter it into the **Icon ID** field in the Discord Prescene Settings Inspector.
+上傳後自訂該圖片的 **Asset Key/Name**。
 
-For example:
+把**Asset Key**填入 Discord Presence Settings Inspector 的 **Icon ID** 欄位。
 
-```text
-my_icon
-```
+**不要把Name填進去，SDK不認**
 
-The Icon ID must match the asset configured in your Discord Application.
 
-> The Application ID and Icon ID are the only configurable values provided by Discord Prescene. Other Rich Presence information is automatically generated by the plugin.
+Icon ID 必須與 Discord Application 中的素材名稱完全一致。
 
----
-
-## Usage
-
-Once the Settings asset has been configured, simply open your Unity project while the Discord desktop application is running.
-
-Discord Prescene will automatically update your Discord Rich Presence.
-
-The displayed information is generated automatically from the current Unity Editor state.
-
-For example:
-
-```text
-Editing Unity Project
-
-My Project
-Scene: Main
-Unity 2022.3.22f1
-
-01:23:45 elapsed
-```
-
-The exact information displayed depends on the current Unity Editor state.
+> 插件可以設定的項目只有 **Application ID** 和 **Icon ID**。其他 Rich Presence 資訊會由插件根據目前的 Unity Editor 狀態自動產生。
 
 ---
 
-## Troubleshooting
+## 使用方式
 
-### Rich Presence does not appear
+完成設定後，只要在 Discord APP正在執行的情況下開啟 Unity 專案即可。
 
-Make sure:
+插件會自動更新你的 Discord Rich Presence。
 
-- Discord is running.
-- Discord Social SDK for Unity is installed.
-- Discord Prescene is installed.
-- A Discord Prescene Settings asset has been created.
-- The correct Application ID has been entered.
-- The Application ID belongs to the Discord Application you configured.
-- You have restarted the Unity Editor after installation.
+顯示的資訊會根據目前 Unity Editor 的狀態自動產生，像這樣：
 
-### Custom icon does not appear
+```text
+Unity Editor
 
-Make sure:
+(專案名稱)
+Scene: (場景名稱)
+Unity (版本號)
 
-- The image has been uploaded to the correct Discord Application.
-- The correct Icon ID/key has been entered.
-- The Icon ID matches the asset configured in Discord.
-- Discord is running.
-- You restarted Unity after changing the configuration.
+01:23:45
+```
 
-### SDK errors
+---
 
-Make sure you downloaded and imported the **Unity Plugin** rather than the **Unity Sample**.
+## 疑難排解
 
-For Discord Social SDK installation issues, refer to the official Discord documentation:
+### Discord 沒有顯示 Rich Presence
+
+請確認：
+
+- Discord APP正在執行。
+- Discord Social SDK for Unity 已正確安裝。
+- 插件已正確匯入。
+- 已使用 **Tools → Discord Prescene → Create Settings** 建立設定檔。
+- Application ID 有填對。
+- Application ID 對應到你設定的 Discord Application。
+- 安裝完成後已重新啟動 Unity Editor。
+- Discord最多只會同時顯示兩個 Rich Presence，你是不是開太多東西了
+
+### 自訂圖標沒有顯示
+
+請確認：
+
+- 圖片已上傳到正確的 Discord Application。
+- Icon ID 填寫正確。
+- Icon ID 與 Discord 中的 Asset ID / Key 完全一致。
+- Discord 桌面版正在執行。
+- 修改設定後已重新啟動 Unity Editor。
+
+### SDK 發生錯誤
+
+請確認你下載並匯入的是 **Unity Plugin**，而不是 **Unity Sample**。
+
+如果遇到 Discord Social SDK 安裝相關問題，請參考 Discord 官方文件：
 
 [Discord Social SDK — Getting Started with Unity](https://docs.discord.com/developers/discord-social-sdk/getting-started/using-unity)
 
-Remember that Discord Prescene does **not** require the OAuth, authentication, or login steps described later in the official documentation.
+請注意，Discord Presence **不需要**官方文件後續的 OAuth、驗證或登入流程。
 
 ---
 
-## License
+## 授權
 
-This project is licensed under the [Apache License 2.0](LICENSE).
+本專案採用 [Apache License 2.0](LICENSE)。
 
-The Discord Social SDK is a separate third-party dependency and is not included under this license.
+Discord Social SDK 為獨立的第三方依賴，其授權不包含在本專案的 [Apache License 2.0](LICENSE) 中。
+
+Discord Social SDK 版權屬於 Discord Inc.
