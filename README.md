@@ -1,4 +1,4 @@
-# Discord Prescene for Unity
+# Discord Rich Prescene for Unity
 
 A lightweight Discord Rich Presence plugin for the Unity Editor.
 
