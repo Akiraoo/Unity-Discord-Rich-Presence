@@ -50,7 +50,7 @@ SDK **不包含在 Discord Prescene 中**，需要另外從 Discord 官方下載
 
 下載 **Unity Plugin** 並匯入你的 Unity 專案。
 
-> **記得：** 下載 **Unity Plugin**，不是 Unity Sample。
+> **注意：** 要下載的是 **Unity Plugin**，不是 Unity Sample。
 
 ### ⚠️ 不用完成 Discord 官方教學的全部步驟
 
@@ -151,8 +151,6 @@ Unity (版本號)
 
 01:23:45
 ```
-
-實際顯示內容會依目前的 Unity Editor 狀態而有所不同。
 
 ---
 
