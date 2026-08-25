@@ -195,8 +195,6 @@ Unity (版本號)
 
 本專案採用 [Apache License 2.0](LICENSE)。
 
-
-
-Discord Social SDK 為獨立的第三方依賴，其授權不包含在本專案的 MIT License 中。
+Discord Social SDK 為獨立的第三方依賴，其授權不包含在本專案的 Apache License 2.0 中。
 
 Discord Social SDK 版權屬於 Discord Inc.
