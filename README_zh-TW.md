@@ -119,13 +119,9 @@ Discord Prescene 支援自訂的 Rich Presence 圖示。
 上傳後自訂該圖片的 **Asset Key/Name**。
 
 把**Asset Key**填入 Discord Prescene Settings Inspector 的 **Icon ID** 欄位。
-不要把Name填進去，SDK不認
 
-例如：
+**不要把Name填進去，SDK不認**
 
-```text
-my_icon
-```
 
 Icon ID 必須與 Discord Application 中的素材名稱完全一致。
 
