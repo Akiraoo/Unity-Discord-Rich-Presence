@@ -1,5 +1,7 @@
 # Discord Rich Prescene for Unity
 
+[繁體中文版](README_zh-TW.md)
+
 A lightweight Discord Rich Presence plugin for the Unity Editor.
 
 Discord Prescene automatically displays information about your current Unity project and Unity Editor as a Discord Rich Presence.
