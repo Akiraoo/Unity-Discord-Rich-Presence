@@ -194,6 +194,6 @@ Remember that Discord Prescene does **not** require the OAuth, authentication, o
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [Apache License 2.0](LICENSE).
 
-The Discord Social SDK is a separate third-party dependency and is not included under this project's license.
+The Discord Social SDK is a separate third-party dependency and is not included under this license.
