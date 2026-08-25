@@ -2,7 +2,7 @@
 
 一個輕量的 Unity Editor Discord Rich Presence 插件。
 
-Discord Prescene 會自動將目前 Unity 專案與 Editor 狀態顯示為 Discord狀態，就正在游玩那欄。
+Discord Prescene 會自動將目前 Unity 專案與 Editor 狀態顯示為 Discord 狀態，也就是 Discord 個人資料上「正在遊玩」的那一欄。
 
 ## 功能
 
@@ -50,7 +50,7 @@ SDK **不包含在 Discord Prescene 中**，需要另外從 Discord 官方下載
 
 下載 **Unity Plugin** 並匯入你的 Unity 專案。
 
-> **記得：** 下載 **Unity Plugin**，不要下載 Unity Sample。
+> **記得：** 下載 **Unity Plugin**，不是 Unity Sample。
 
 ### ⚠️ 不用完成 Discord 官方教學的全部步驟
 
@@ -117,9 +117,10 @@ Discord Prescene 支援自訂的 Rich Presence 圖示。
 
 在 Discord Developer Portal 打開 Discord Application後臺，在 Rich Presence 的Rich Prescene素材那上傳圖片。
 
-上傳後自訂該圖片的 **Asset ID / Key**。
+上傳後自訂該圖片的 **Asset Key/Name**。
 
-填入 Discord Prescene Settings Inspector 的 **Icon ID** 欄位。
+把**Asset Key**填入 Discord Prescene Settings Inspector 的 **Icon ID** 欄位。
+不要把Name填進去，SDK不認
 
 例如：
 
