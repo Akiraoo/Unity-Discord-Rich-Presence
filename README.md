@@ -1,4 +1,4 @@
-# Discord Rich Prescene for Unity
+# Discord Rich Presence for Unity
 
 [繁體中文版](README_zh-TW.md)
 
