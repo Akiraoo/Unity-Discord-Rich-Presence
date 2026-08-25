@@ -40,7 +40,7 @@
 
 ### 2. 安裝 Discord Social SDK
 
-Discord Prescene 需要 **Discord Social SDK for Unity**。
+Discord Presence 需要 **Discord Social SDK for Unity**。
 
 SDK **不包含在本插件中**，需要另外從 Discord 官方下載。
 
