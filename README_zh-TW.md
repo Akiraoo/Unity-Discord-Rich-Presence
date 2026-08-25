@@ -1,4 +1,4 @@
-# Discord Rich Prescene for Unity
+# Discord Rich Presence for Unity
 
 一個輕量的 Unity Editor Discord Rich Presence 插件。
 
