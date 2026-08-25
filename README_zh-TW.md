@@ -195,6 +195,8 @@ Unity (版本號)
 
 本專案採用 [MIT License](LICENSE)。
 
+
+
 Discord Social SDK 為獨立的第三方依賴，其授權不包含在本專案的 MIT License 中。
 
-~~絕對不是我懶得包~~
+Discord Social SDK 版權屬於 Discord Inc.
