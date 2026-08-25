@@ -76,7 +76,6 @@ Discord Prescene 會自行處理所需的 SDK 初始化。
 
 匯入 Discord Social SDK 和 Discord Prescene 後，**重新啟動 Unity Editor**。
 
-~~因為懶得做即時更新（不是~~
 
 ---
 
