@@ -7,7 +7,7 @@ Discord Prescene 會自動將目前 Unity 專案與 Editor 狀態顯示為 Disco
 ## 功能
 
 - 自動顯示目前 Unity 專案
-- 顯示目前開啟的 場景
+- 顯示目前開啟的場景
 - 顯示 Unity 版本
 - 顯示目前 Editor 狀態
 - 顯示打開時間
@@ -18,11 +18,11 @@ Discord Prescene 會自動將目前 Unity 專案與 Editor 狀態顯示為 Disco
 
 - Unity 2022.3 或更高版本
 - Discord Social SDK for Unity
-- Discord 桌面版
+- Discord APP
 
-**已測試版本：Unity `2022.3.22f1`**
+**測試用的版本：Unity `2022.3.22f1`**
 
-其他 Unity 版本理論上應該能用，但沒試過。
+其他 Unity 版本理論上應該能用，反正我沒試過。
 
 ---
 
@@ -50,21 +50,21 @@ SDK **不包含在 Discord Prescene 中**，需要另外從 Discord 官方下載
 
 下載 **Unity Plugin** 並匯入你的 Unity 專案。
 
-> **重要：** 請下載 **Unity Plugin**，不要下載 Unity Sample。
+> **記得：** 下載 **Unity Plugin**，不要下載 Unity Sample。
 
-### ⚠️ 不需要完成 Discord 官方教學的全部步驟
+### ⚠️ 不用完成 Discord 官方教學的全部步驟
 
 Discord 官方文件後續還包含 OAuth、驗證、登入以及其他 Social SDK 功能。
 
-**Discord Prescene 不需要這些功能，因此不需要照著後續步驟操作。**
+**多做多心酸的，這個腳本根本用不到，所以不要照著官方文檔的後續步驟操作。**
 
 你只需要：
 
-**建立 Discord Application → 取得 Application ID**
+**建立 Discord Application → 取得 Application ID** 就這樣
 
 Discord Prescene 會自行處理所需的 SDK 初始化。
 
-**這些全都不要碰**：
+**這些全都不要碰！！**：
 
 - OAuth
 - Discord 登入
@@ -189,7 +189,6 @@ Unity (版本號)
 [Discord Social SDK — Getting Started with Unity](https://docs.discord.com/developers/discord-social-sdk/getting-started/using-unity)
 
 請注意，Discord Prescene **不需要**官方文件後續的 OAuth、驗證或登入流程。
-多做多心酸的，完全用不到
 
 ---
 
@@ -198,4 +197,5 @@ Unity (版本號)
 本專案採用 [MIT License](LICENSE)。
 
 Discord Social SDK 為獨立的第三方依賴，其授權不包含在本專案的 MIT License 中。
+
 ~~絕對不是我懶得包~~
