@@ -193,7 +193,7 @@ Unity (版本號)
 
 ## 授權
 
-本專案採用 [MIT License](LICENSE)。
+本專案採用 [Apache License 2.0](LICENSE)。
 
 
 
