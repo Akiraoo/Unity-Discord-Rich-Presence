@@ -140,6 +140,9 @@ public static class DiscordEditorPresence
 
 
             activity.SetName(
+                settings.statusName
+            );
+            activity.SetName(
                 "Unity Editor"
             );
 
